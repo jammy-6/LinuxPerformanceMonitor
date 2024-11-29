@@ -4,7 +4,9 @@
 ![](./presentation.png)
 
 # 项目结构展示
-项目通过模块化处理进行解耦，从下图可以看到项目分成了三块，即数据源(client)、数据中心(server)、用于展示的客户端(display)。模块化处理后，后续的迭代更新会更方便，例如当需要把gRPC模块替换成自研的gRPC，仅需要替换server以及client，其它模块不用动。
+项目通过模块化处理进行解耦，从下图可以看到项目分成了三块，即数据源(client)、数据中心(server)、用于展示的客户端(display)。
+模块化处理后，后续的更新会更方便，例如当需要把gRPC模块替换成自研的gRPC，仅需要替换server以及client，其它模块不用动。
+server端也可以接受多个client端的数据，即同时监控多台机器，display可以不是和server端同一个机器上，做到了完全分离。
 ![](./structor.jpg)
 # 编译安装流程
 
